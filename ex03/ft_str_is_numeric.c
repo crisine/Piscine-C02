@@ -6,13 +6,13 @@
 /*   By: misung <misung@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 19:25:48 by misung            #+#    #+#             */
-/*   Updated: 2021/09/12 19:27:21 by misung           ###   ########.fr       */
+/*   Updated: 2021/09/14 17:46:59 by misung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_numeric(char *str)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (str[i] != '\0')

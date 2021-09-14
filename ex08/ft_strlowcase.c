@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: misung <misung@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/12 19:12:24 by misung            #+#    #+#             */
-/*   Updated: 2021/09/14 17:46:31 by misung           ###   ########.fr       */
+/*   Created: 2021/09/14 18:11:38 by misung            #+#    #+#             */
+/*   Updated: 2021/09/14 18:12:42 by misung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_alpha(char *str)
+char	*ft_strlowcase(char *str)
 {
 	unsigned int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] >= 'a' && str[i] <= 'z')
-			|| (str[i] >= 'A' && str[i] <= 'Z'))
+		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
-			i++;
+			str[i] += 32;
 		}
-		else
-		{
-			return (0);
-		}
+		i++;
 	}
-	return (1);
+	return (str);
 }
